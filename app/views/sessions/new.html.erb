@@ -1,0 +1,24 @@
+<div class="card mx-auto mt-5" style="max-width: 500px;">
+  <div class="card-header">
+    <h1 class="text-center">Login</h1>
+  </div>
+  <div class="card-body">
+    <%= form_tag '/login' do %>
+
+      <div class="form-group">
+        <%= label_tag :email %>
+        <%= text_field_tag :email, nil, class: 'form-control', placeholder: 'Enter your email', size: 30 %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Enter your password', size: 30 %>
+      </div>
+
+      <br>
+
+      <%= submit_tag "Submit", class: "btn btn-primary mx-auto d-block" %>
+
+    <% end %>
+  </div>
+</div>
